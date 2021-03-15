@@ -1,4 +1,4 @@
-# Automation Awto
+# Automatización ejercicio Sophos
 > Repositorio Automatización Ejercicio  Sophos donde. Basado en un patrón de Diseño ScreenPlay el cual nos permite estructurar los paquetes de
 >- Factories: Clases encargadas de crear objetos models y "convertir" los datos JSON a objectos Java   
 >- Models: Clases donde se manejan los datos a utilizar en la ejecución
