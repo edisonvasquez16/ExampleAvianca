@@ -1,0 +1,478 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.19/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="69255fda7cd34c4c5f12bc6ee5476ec1637f75fb089747addfa1af6602df7b2e.html">Validar Selecci&oacute;n De Vuelos</a></span>
+                > <span class="truncate-60"><a
+                    href="9bff25866c57d2eadbf07b96630056384a129baf056dbcb4507373856758a320.html">Seleccionar vuelos </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 14-03-2021 20:19</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Validar Selección De Vuelos </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                Como un usuario de Avianca<br />
+Quiero utilizar la aplicación Web<br />
+Para comprar vuelos a diferentes destinos
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="65a2df077748f74ccd607af4e962738958bdf672b0d6b0150ae42bcfa475044e.html">Smoke
+                                    (tag)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="53069ead7b0df7bb2fd55dc26d8afc2d3681a46615d2915b8acdf6ec33d3f0f8.html">
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="error-color">Seleccionar vuelos
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Dado que el usuario Edison accede hasta la página de Avianca<br>Cuando el selecciona los datos del vuelo &lt;vuelo&gt;<br>Entonces el debería poder reservar el vuelo correctamente</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Element not interactable exception: element not interactable</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>org.openqa.selenium.ElementNotInteractableException </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>co.com.avianca.tasks.SetMonths.performAs(SetMonths.java:34)<br />co.com.avianca.tasks.SelectTrip.performAs(SelectTrip.java:23)<br />co.com.avianca.tasks.SearchFlight.performAs(SearchFlight.java:25)<br />co.com.avianca.steps.ReserveFlights.reserveFlights(ReserveFlights.java:38)<br />cucumber.runner.Runner.runPickle(Runner.java:80)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+                <div class="panel-body">
+                    <a href="pagesource3862036621500529501.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="67770b120dfb3c52ac6e4d13ec5aac69a7cea6ea8e21c3454f441ad6b811631f.png" title=" Example: {vuelo=1}" width="1042"/>
+                <img src="67770b120dfb3c52ac6e4d13ec5aac69a7cea6ea8e21c3454f441ad6b811631f.png" title=" Dado que el usuario Edison accede hasta la p&aacute;gina de Avianca" width="1042"/>
+                <img src="67770b120dfb3c52ac6e4d13ec5aac69a7cea6ea8e21c3454f441ad6b811631f.png" title=" Edison abre el navegador" width="1042"/>
+                <img src="67770b120dfb3c52ac6e4d13ec5aac69a7cea6ea8e21c3454f441ad6b811631f.png" title=" Edison opens the Avianca" width="1042"/>
+                <img src="c7a9baf74ae194ec8e9c0d7185f0f5e59ccd6c591a73408ae8d3d75d3eb2d00e.png" title=" Edison abre el navegador (completed)" width="1312"/>
+                <img src="c7a9baf74ae194ec8e9c0d7185f0f5e59ccd6c591a73408ae8d3d75d3eb2d00e.png" title=" Dado que el usuario Edison accede hasta la p&aacute;gina de Avianca (completed)" width="1312"/>
+                <img src="c7a9baf74ae194ec8e9c0d7185f0f5e59ccd6c591a73408ae8d3d75d3eb2d00e.png" title=" Cuando el selecciona los datos del vuelo 1" width="1312"/>
+                <img src="0e8a85887573032633d316ee7ef8282b3244e2dd8e5168df720c987b007583b1.png" title=" Edison search flight" width="1312"/>
+                <img src="ba584740ed0ac81353b785cbd4e9841423ad8fe7cb8f478940728eeb673cf496.png" title=" Edison clicks on input from " width="1312"/>
+                <img src="8d6355f293348ef9d82c11aaaf9e358830dde4837a862b949f6a09890dfa8a97.png" title=" Edison clicks on input from  (completed)" width="1312"/>
+                <img src="8d6355f293348ef9d82c11aaaf9e358830dde4837a862b949f6a09890dfa8a97.png" title=" Edison enters 'Medell&iacute;n' into input from " width="1312"/>
+                <img src="8bbc8974ec34f6dfad1a48ea5a963400c07fba7aec3070fbb58793727c7ee976.png" title=" Edison enters 'Medell&iacute;n' into input from  (completed)" width="1312"/>
+                <img src="8bbc8974ec34f6dfad1a48ea5a963400c07fba7aec3070fbb58793727c7ee976.png" title=" Edison clicks on options catalogs" width="1312"/>
+                <img src="391cfea9ca182729e0f97b78f1334c736c0ef25fb97e2351130d043b469e44e0.png" title=" Edison clicks on options catalogs (completed)" width="1312"/>
+                <img src="391cfea9ca182729e0f97b78f1334c736c0ef25fb97e2351130d043b469e44e0.png" title=" Edison enters 'Bogot&aacute;' into input destination" width="1312"/>
+                <img src="2097d02805fd722edd9034b9884c4a4397f2a6a18a405309e5918d1366d00d65.png" title=" Edison enters 'Bogot&aacute;' into input destination (completed)" width="1312"/>
+                <img src="2097d02805fd722edd9034b9884c4a4397f2a6a18a405309e5918d1366d00d65.png" title=" Edison clicks on options catalogs" width="1312"/>
+                <img src="98424bddeeb9ab85558df12d3767b78240593e77b27f87d5d56255bb0c39a8fa.png" title=" Edison clicks on options catalogs (completed)" width="1312"/>
+                <img src="98424bddeeb9ab85558df12d3767b78240593e77b27f87d5d56255bb0c39a8fa.png" title=" Edison clicks on input trip date" width="1312"/>
+                <img src="562d55bd20fc9642ec33624b36347704b04c9b0cbbfa1d3e5096a5ad19b0964c.png" title=" Edison clicks on input trip date (completed)" width="1312"/>
+                <img src="562d55bd20fc9642ec33624b36347704b04c9b0cbbfa1d3e5096a5ad19b0964c.png" title=" Edison select trip" width="1312"/>
+                <img src="562d55bd20fc9642ec33624b36347704b04c9b0cbbfa1d3e5096a5ad19b0964c.png" title=" Edison set months" width="1312"/>
+                <img src="dc5dc3d5012ac22cc2002f621602c42b3e783399c3aaf28d2617aad46a80981d.png" title=" Edison clicks on button previous month" width="1312"/>
+                <img src="76e0837b2d3748ac512dcdaa5075af9d798de837a54e1eecd47418a1423a87a3.png" title=" Edison clicks on button previous month (completed)" width="1312"/>
+                <img src="76e0837b2d3748ac512dcdaa5075af9d798de837a54e1eecd47418a1423a87a3.png" title=" Edison set months (completed)" width="1312"/>
+                <img src="76e0837b2d3748ac512dcdaa5075af9d798de837a54e1eecd47418a1423a87a3.png" title=" Edison clicks on day of month" width="1312"/>
+                <img src="584f901220b55077becb4ac36721a6da627ae863d30cf71d865938a5fc0bd876.png" title=" Edison clicks on day of month (completed)" width="1312"/>
+                <img src="584f901220b55077becb4ac36721a6da627ae863d30cf71d865938a5fc0bd876.png" title=" Edison select trip (completed)" width="1312"/>
+                <img src="584f901220b55077becb4ac36721a6da627ae863d30cf71d865938a5fc0bd876.png" title=" Edison select return" width="1312"/>
+                <img src="584f901220b55077becb4ac36721a6da627ae863d30cf71d865938a5fc0bd876.png" title=" Edison clicks on day of month" width="1312"/>
+                <img src="26045e1d6871d6e6b1967d7b41a7dbb9ec01d14a4293754ec770dd793c02ecf3.png" title=" Edison clicks on day of month (completed)" width="1312"/>
+                <img src="26045e1d6871d6e6b1967d7b41a7dbb9ec01d14a4293754ec770dd793c02ecf3.png" title=" Edison select return (completed)" width="1312"/>
+                <img src="26045e1d6871d6e6b1967d7b41a7dbb9ec01d14a4293754ec770dd793c02ecf3.png" title=" Edison clicks on input persons" width="1312"/>
+                <img src="bdbec546873fc59c06e667c11f03f773a70f41bde7aab537b4f163241982f8cc.png" title=" Edison clicks on input persons (completed)" width="1312"/>
+                <img src="bdbec546873fc59c06e667c11f03f773a70f41bde7aab537b4f163241982f8cc.png" title=" Edison clicks on button class trip" width="1312"/>
+                <img src="1bc5dc2aa7697edd5f1e96189c5b1f9d9e8b7729c3ebdbbc5390d2f817107591.png" title=" Edison clicks on button class trip (completed)" width="1312"/>
+                <img src="1bc5dc2aa7697edd5f1e96189c5b1f9d9e8b7729c3ebdbbc5390d2f817107591.png" title=" Edison add persons" width="1312"/>
+                <img src="56bb80dd70b5cd18c790a4d04b3016c178dc920123d46588ce5611c2ba3e645b.png" title=" Edison clicks on add adult button" width="1312"/>
+                <img src="0ab4ed5f7a14a2ad48209e718f3caecf8ba3ad33b74c57c6c76a837837c7a590.png" title=" Edison clicks on add adult button (completed)" width="1312"/>
+                <img src="0ab4ed5f7a14a2ad48209e718f3caecf8ba3ad33b74c57c6c76a837837c7a590.png" title=" Edison add persons (completed)" width="1312"/>
+                <img src="0ab4ed5f7a14a2ad48209e718f3caecf8ba3ad33b74c57c6c76a837837c7a590.png" title=" Edison add persons" width="1312"/>
+                <img src="0ab4ed5f7a14a2ad48209e718f3caecf8ba3ad33b74c57c6c76a837837c7a590.png" title=" Edison clicks on add boys button" width="1312"/>
+                <img src="de3a8fdec398967e0aa1defdbfee4c77c61ab1fec0e66955fa4d0b1d72be472a.png" title=" Edison clicks on add boys button (completed)" width="1312"/>
+                <img src="de3a8fdec398967e0aa1defdbfee4c77c61ab1fec0e66955fa4d0b1d72be472a.png" title=" Edison add persons (completed)" width="1312"/>
+                <img src="de3a8fdec398967e0aa1defdbfee4c77c61ab1fec0e66955fa4d0b1d72be472a.png" title=" Edison add persons" width="1312"/>
+                <img src="de3a8fdec398967e0aa1defdbfee4c77c61ab1fec0e66955fa4d0b1d72be472a.png" title=" Edison clicks on add babies button" width="1312"/>
+                <img src="dfd260b6d7c61d33a4b68a695d0f08bd7f6df76d3b9defa3587fe30100a18016.png" title=" Edison clicks on add babies button (completed)" width="1312"/>
+                <img src="dfd260b6d7c61d33a4b68a695d0f08bd7f6df76d3b9defa3587fe30100a18016.png" title=" Edison add persons (completed)" width="1312"/>
+                <img src="dfd260b6d7c61d33a4b68a695d0f08bd7f6df76d3b9defa3587fe30100a18016.png" title=" Edison clicks on add persons" width="1312"/>
+                <img src="9e0fafb8ac1c0bb96b559f87d294eb0abce8aa9876f99c4aeb4eb244724d5881.png" title=" Edison clicks on add persons (completed)" width="1312"/>
+                <img src="9e0fafb8ac1c0bb96b559f87d294eb0abce8aa9876f99c4aeb4eb244724d5881.png" title=" Edison clicks on button search flight" width="1312"/>
+                <img src="50ec9009db7879928497bcf764450169c8908057439bdb716ac2ea447d51071e.png" title=" Edison clicks on button search flight (completed)" width="1312"/>
+                <img src="ea4bdb9ddd13c395b64aab02ebf3614d347eb9cee495dce05352edd9caac90af.png" title=" Edison clicks on button accept message" width="1312"/>
+                <img src="f18e6cd9468839ae34826990ecd438a08bca6c1d10f08780c179db7b29e908e8.png" title=" Edison clicks on button accept message (completed)" width="1312"/>
+                <img src="f18e6cd9468839ae34826990ecd438a08bca6c1d10f08780c179db7b29e908e8.png" title=" Edison search flight (completed)" width="1312"/>
+                <img src="f18e6cd9468839ae34826990ecd438a08bca6c1d10f08780c179db7b29e908e8.png" title=" Edison select flight" width="1312"/>
+                <img src="2f1b2b58ae01908c7e09e25ef94f3eecfaf35f1ddbbcf3d94f985a1031e4296e.png" title=" Edison clicks on button select flight" width="1312"/>
+                <img src="01ddc5982247ac3fdf2eb5619de425638743943d67feea728338aae3357b302a.png" title=" Edison clicks on button select flight (completed)" width="1312"/>
+                <img src="01ddc5982247ac3fdf2eb5619de425638743943d67feea728338aae3357b302a.png" title=" Edison clicks on button continue" width="1312"/>
+                <img src="dbeeaa7772a3f5ddb7ac948aa058aa7c94cbeb0f1cd0afb490ec551545cf60f7.png" title=" Edison clicks on button continue (completed)" width="1312"/>
+                <img src="6d2a67dc0641c4f9dffb6fc92f5bd6bd059e8e2377f14dd081199041a6d23b60.png" title=" Edison clicks on button select flight" width="1312"/>
+                <img src="cb206ee353c5654dadae4dea1dc051610979e558598f07c2d4b70f5deccf6422.png" title=" Edison clicks on button select flight (completed)" width="1312"/>
+                <img src="cb206ee353c5654dadae4dea1dc051610979e558598f07c2d4b70f5deccf6422.png" title=" Edison clicks on button continue" width="1312"/>
+                <img src="fd669fc7ee4deb7d33b64a27576dcb1595e6ba4244ef906586ee5121731dd580.png" title=" Edison clicks on button continue (completed)" width="1312"/>
+                <img src="fd669fc7ee4deb7d33b64a27576dcb1595e6ba4244ef906586ee5121731dd580.png" title=" Edison select flight (completed)" width="1312"/>
+                <img src="fd669fc7ee4deb7d33b64a27576dcb1595e6ba4244ef906586ee5121731dd580.png" title=" Edison fill persons" width="1312"/>
+                <img src="fd669fc7ee4deb7d33b64a27576dcb1595e6ba4244ef906586ee5121731dd580.png" title=" Edison enters 'Edwin' into input name" width="1312"/>
+                <img src="eba25cd136dc46e1b108e3268624f8990737092715b50e3b3583c4117a4b5eb1.png" title=" Edison enters 'Edwin' into input name (completed)" width="1312"/>
+                <img src="eba25cd136dc46e1b108e3268624f8990737092715b50e3b3583c4117a4b5eb1.png" title=" Edison enters 'Velasquez' into input family name" width="1312"/>
+                <img src="376f6b08d453e3bbb036fc33884b8cc0aaf765433e2fa4130b6c714f211fd90a.png" title=" Edison enters 'Velasquez' into input family name (completed)" width="1312"/>
+                <img src="236ae50e9d5f8c9e4b5aa3b7e8dbb368eaefbafa0690b3a84bf9c54bb937e765.png" title=" Edison clicks on button next person" width="1312"/>
+                <img src="07917b91214d18a8a5be1b95370bc486baefc444622a22fb5c8dc95d82fd0ef8.png" title=" Edison clicks on button next person (completed)" width="1312"/>
+                <img src="07917b91214d18a8a5be1b95370bc486baefc444622a22fb5c8dc95d82fd0ef8.png" title=" Edison enters 'Carmela' into input name" width="1312"/>
+                <img src="9f4f4369d34f29afefc314ebdc3a431d04a1ccf9aa11127d1ba2c8683597bfe5.png" title=" Edison enters 'Carmela' into input name (completed)" width="1312"/>
+                <img src="9f4f4369d34f29afefc314ebdc3a431d04a1ccf9aa11127d1ba2c8683597bfe5.png" title=" Edison enters 'Montez' into input family name" width="1312"/>
+                <img src="2718fdaca41aa87112ade43d4240dcdc0a2ba1c5c0204a0263b8dfe7e5cf2624.png" title=" Edison enters 'Montez' into input family name (completed)" width="1312"/>
+                <img src="29fc2d7ca2042049455e161d5146a5e092291b4e60e8804a854123b9ff50f19b.png" title=" Edison clicks on button next person" width="1312"/>
+                <img src="2f046b2ff81b7a8698de471352120c4dfbe3c4fabb07574ba621aa0f7a9491d7.png" title=" Edison clicks on button next person (completed)" width="1312"/>
+                <img src="2f046b2ff81b7a8698de471352120c4dfbe3c4fabb07574ba621aa0f7a9491d7.png" title=" Edison enters 'Rosero' into input name" width="1312"/>
+                <img src="c76ec487e9b40b1c4ee33fa7569d4dcb043ff9bb582b364c582b715d78ac64b4.png" title=" Edison enters 'Rosero' into input name (completed)" width="1312"/>
+                <img src="c76ec487e9b40b1c4ee33fa7569d4dcb043ff9bb582b364c582b715d78ac64b4.png" title=" Edison enters 'Mamian' into input family name" width="1312"/>
+                <img src="715cc95bc029397a1b67e14514f984090ce1d79968ccf1629d36de9a41254234.png" title=" Edison enters 'Mamian' into input family name (completed)" width="1312"/>
+                <img src="47b0e89d6caec4ac435dccaece251c703f75491b657f4be8d688bb83433fd51e.png" title=" Edison enters '13' into input birthday day" width="1312"/>
+                <img src="18430dfbb883007e2e234f86fa8b62c72334a2cd248aded28715fc9871747de1.png" title=" Edison enters '13' into input birthday day (completed)" width="1312"/>
+                <img src="18430dfbb883007e2e234f86fa8b62c72334a2cd248aded28715fc9871747de1.png" title=" Edison clicks on select birthday motn" width="1312"/>
+                <img src="b1e99d633e84a290a22ab379047f6829da7fe01bd98519b553fb8826df73bbdc.png" title=" Edison clicks on select birthday motn (completed)" width="1312"/>
+                <img src="b1e99d633e84a290a22ab379047f6829da7fe01bd98519b553fb8826df73bbdc.png" title=" Edison clicks on option birthday month" width="1312"/>
+                <img src="ca7454a4eded1f6db3654dd520d10f50086002facdb6966343f5d53569e6ddf9.png" title=" Edison clicks on option birthday month (completed)" width="1312"/>
+                <img src="ca7454a4eded1f6db3654dd520d10f50086002facdb6966343f5d53569e6ddf9.png" title=" Edison enters '2011' into input birthday year" width="1312"/>
+                <img src="abcc83e7f57fd2826513c057660a10e5d0c8e65454aad8b1f6ba65d6eaa20ff5.png" title=" Edison enters '2011' into input birthday year (completed)" width="1312"/>
+                <img src="d1b43c73c42a2220d9fddf1433e99e3d32a10b29c01ec02fb0b115031ab1d0d2.png" title=" Edison clicks on button next person" width="1312"/>
+                <img src="e5d2769dc9636d98a80211cb640ac2b7599b8f623191ee7f292d86387dac31c9.png" title=" Edison clicks on button next person (completed)" width="1312"/>
+                <img src="e5d2769dc9636d98a80211cb640ac2b7599b8f623191ee7f292d86387dac31c9.png" title=" Edison enters 'Miguelita' into input name" width="1312"/>
+                <img src="fc641841d59d3aded49d84732823504125496efee9a13e40d008bb65b715a18c.png" title=" Edison enters 'Miguelita' into input name (completed)" width="1312"/>
+                <img src="fc641841d59d3aded49d84732823504125496efee9a13e40d008bb65b715a18c.png" title=" Edison enters 'Hurtado' into input family name" width="1312"/>
+                <img src="50c24ed58ca6f2e18cc47ba3725ede1c60cc19e0a982b4b18b157fe81b3acd54.png" title=" Edison enters 'Hurtado' into input family name (completed)" width="1312"/>
+                <img src="d3c14d4a2a73da996f72b00c1c48366eef9ced4a1efe3777657f3f0293845a3e.png" title=" Edison enters '25' into input birthday day" width="1312"/>
+                <img src="2e01e5370fe4edfd0e70c9261717f616982a8b1aacb6dc82455aa06a57a23a08.png" title=" Edison enters '25' into input birthday day (completed)" width="1312"/>
+                <img src="2e01e5370fe4edfd0e70c9261717f616982a8b1aacb6dc82455aa06a57a23a08.png" title=" Edison clicks on select birthday motn" width="1312"/>
+                <img src="9db2259680624af9021ae514ab109213df93d3c08e4c1e552878ae37bc1159b8.png" title=" Edison clicks on select birthday motn (completed)" width="1312"/>
+                <img src="9db2259680624af9021ae514ab109213df93d3c08e4c1e552878ae37bc1159b8.png" title=" Edison clicks on option birthday month" width="1312"/>
+                <img src="3748c3dfff73e28eac0110148b82075231766374051f539cc149ca8135b9e759.png" title=" Edison clicks on option birthday month (completed)" width="1312"/>
+                <img src="3748c3dfff73e28eac0110148b82075231766374051f539cc149ca8135b9e759.png" title=" Edison enters '2020' into input birthday year" width="1312"/>
+                <img src="a8307a284c50d0d735cfd0f6c4f296bfa3df905a145b516e2eb627cc5d87f150.png" title=" Edison enters '2020' into input birthday year (completed)" width="1312"/>
+                <img src="93e1c19d724364fc3a20be278dee491637f40a909660a2fb1c0b8667e953da5d.png" title=" Edison clicks on button contact info" width="1312"/>
+                <img src="a643f5c117a7b030b3c469c86f43f421abd5309b91325b5d238aa654571f85af.png" title=" Edison clicks on button contact info (completed)" width="1312"/>
+                <img src="a643f5c117a7b030b3c469c86f43f421abd5309b91325b5d238aa654571f85af.png" title=" Edison fill persons (completed)" width="1312"/>
+                <img src="a643f5c117a7b030b3c469c86f43f421abd5309b91325b5d238aa654571f85af.png" title=" Edison fill contact" width="1312"/>
+                <img src="a643f5c117a7b030b3c469c86f43f421abd5309b91325b5d238aa654571f85af.png" title=" Edison enters 'correo1@gmail.com' into input email contact" width="1312"/>
+                <img src="27002f4902085361e030f46f86a482d461773fca937653305288da328cd2fb34.png" title=" Edison enters 'correo1@gmail.com' into input email contact (completed)" width="1312"/>
+                <img src="27002f4902085361e030f46f86a482d461773fca937653305288da328cd2fb34.png" title=" Edison enters '325 7891998' into input telephone contact" width="1312"/>
+                <img src="3ea762713603abeea65ef0de47b754d3b8195609fadd12aae379684f2946bfcd.png" title=" Edison enters '325 7891998' into input telephone contact (completed)" width="1312"/>
+                <img src="3ea762713603abeea65ef0de47b754d3b8195609fadd12aae379684f2946bfcd.png" title=" Edison clicks on button save and continue" width="1312"/>
+                <img src="5c439b0a5f4f839b69cccfaf48b971f7d3b43518353f65ad88513affd6aa54db.png" title=" Edison clicks on button save and continue (completed)" width="1312"/>
+                <img src="5c439b0a5f4f839b69cccfaf48b971f7d3b43518353f65ad88513affd6aa54db.png" title=" Edison fill contact (completed)" width="1312"/>
+                <img src="5c439b0a5f4f839b69cccfaf48b971f7d3b43518353f65ad88513affd6aa54db.png" title=" Cuando el selecciona los datos del vuelo 1 (completed)" width="1312"/>
+                <img src="5c439b0a5f4f839b69cccfaf48b971f7d3b43518353f65ad88513affd6aa54db.png" title=" Entonces el deber&iacute;a poder reservar el vuelo correctamente" width="1312"/>
+                <img src="2c704b1441a34a744717b5ac64ae90de8d3b4e42a5e04b7f696920c5d76a52dd.png" title=" Then button reserve should be an element that is visible" width="1312"/>
+                <img src="39bed8783abdaffb7ecf0dceb37cc1bd078870985b1100c26b4fdff9b5f2a77d.png" title=" Then button reserve should be an element that is visible (completed)" width="1312"/>
+                <img src="39bed8783abdaffb7ecf0dceb37cc1bd078870985b1100c26b4fdff9b5f2a77d.png" title=" Then text found should be '&amp;iquest;Necesitas algo de tiempo para pensar? &amp;iexcl;No te preocupes!'" width="1312"/>
+                <img src="39bed8783abdaffb7ecf0dceb37cc1bd078870985b1100c26b4fdff9b5f2a77d.png" title=" Then text found should be '&amp;iquest;Necesitas algo de tiempo para pensar? &amp;iexcl;No te preocupes!' (completed)" width="1312"/>
+                <img src="39bed8783abdaffb7ecf0dceb37cc1bd078870985b1100c26b4fdff9b5f2a77d.png" title=" Entonces el deber&iacute;a poder reservar el vuelo correctamente (completed)" width="1312"/>
+                <img src="39bed8783abdaffb7ecf0dceb37cc1bd078870985b1100c26b4fdff9b5f2a77d.png" title=" Example: {vuelo=1} (completed)" width="1312"/>
+                <img src="67770b120dfb3c52ac6e4d13ec5aac69a7cea6ea8e21c3454f441ad6b811631f.png" title=" Example: {vuelo=2}" width="1042"/>
+                <img src="67770b120dfb3c52ac6e4d13ec5aac69a7cea6ea8e21c3454f441ad6b811631f.png" title=" Dado que el usuario Edison accede hasta la p&aacute;gina de Avianca" width="1042"/>
+                <img src="67770b120dfb3c52ac6e4d13ec5aac69a7cea6ea8e21c3454f441ad6b811631f.png" title=" Edison abre el navegador" width="1042"/>
+                <img src="67770b120dfb3c52ac6e4d13ec5aac69a7cea6ea8e21c3454f441ad6b811631f.png" title=" Edison opens the Avianca" width="1042"/>
+                <img src="bf2cfa1ac23981a990a6a4d4629a33f04440f8027134b929026d5e3075c275a0.png" title=" Edison abre el navegador (completed)" width="1312"/>
+                <img src="bf2cfa1ac23981a990a6a4d4629a33f04440f8027134b929026d5e3075c275a0.png" title=" Dado que el usuario Edison accede hasta la p&aacute;gina de Avianca (completed)" width="1312"/>
+                <img src="bf2cfa1ac23981a990a6a4d4629a33f04440f8027134b929026d5e3075c275a0.png" title=" Cuando el selecciona los datos del vuelo 2" width="1312"/>
+                <img src="0e8a85887573032633d316ee7ef8282b3244e2dd8e5168df720c987b007583b1.png" title=" Edison search flight" width="1312"/>
+                <img src="0e8a85887573032633d316ee7ef8282b3244e2dd8e5168df720c987b007583b1.png" title=" Edison clicks on input from " width="1312"/>
+                <img src="03d783a06952dd5e1749c2cde5e652ab4a5d1afaba967de1166b0b217250763b.png" title=" Edison clicks on input from  (completed)" width="1312"/>
+                <img src="03d783a06952dd5e1749c2cde5e652ab4a5d1afaba967de1166b0b217250763b.png" title=" Edison enters 'Medell&iacute;n' into input from " width="1312"/>
+                <img src="eb6dcff77e44cf394a1d1cfcdb314c638f8a66b9fc1a496bc4b47a3d52f614e9.png" title=" Edison enters 'Medell&iacute;n' into input from  (completed)" width="1312"/>
+                <img src="eb6dcff77e44cf394a1d1cfcdb314c638f8a66b9fc1a496bc4b47a3d52f614e9.png" title=" Edison clicks on options catalogs" width="1312"/>
+                <img src="a5a0e29633ba5771fa3c32016528717d73b69b04e57d1754663de610dc1e2ee1.png" title=" Edison clicks on options catalogs (completed)" width="1312"/>
+                <img src="a5a0e29633ba5771fa3c32016528717d73b69b04e57d1754663de610dc1e2ee1.png" title=" Edison enters 'Cartagena' into input destination" width="1312"/>
+                <img src="46e15cc5e303ff8bd92c14212b6cf531b8066fe122e0312a019c5dc66fa398e6.png" title=" Edison enters 'Cartagena' into input destination (completed)" width="1312"/>
+                <img src="46e15cc5e303ff8bd92c14212b6cf531b8066fe122e0312a019c5dc66fa398e6.png" title=" Edison clicks on options catalogs" width="1312"/>
+                <img src="06e65710a5a1e9c9062b9806f21de54d9e665d7d4650d4c2127d6b01d75f7aed.png" title=" Edison clicks on options catalogs (completed)" width="1312"/>
+                <img src="06e65710a5a1e9c9062b9806f21de54d9e665d7d4650d4c2127d6b01d75f7aed.png" title=" Edison clicks on input trip date" width="1312"/>
+                <img src="9b911bfcdf8a1cdb7f264ecfa45a6e9d791cb783cd32150ec3357f4dcc62457d.png" title=" Edison clicks on input trip date (completed)" width="1312"/>
+                <img src="9b911bfcdf8a1cdb7f264ecfa45a6e9d791cb783cd32150ec3357f4dcc62457d.png" title=" Edison select trip" width="1312"/>
+                <img src="9b911bfcdf8a1cdb7f264ecfa45a6e9d791cb783cd32150ec3357f4dcc62457d.png" title=" Edison set months" width="1312"/>
+                <img src="5f5404722c6908379f51f2fad0a91969e0a7069cc02b9d2532013452fa698566.png" title=" Edison clicks on button previous month" width="1312"/>
+                <img src="2389940ec5bc7d25baefc837d372b06cde0a0763f1015a2a1c2665013e58af16.png" title=" Edison clicks on button previous month (completed)" width="1312"/>
+                <img src="67770b120dfb3c52ac6e4d13ec5aac69a7cea6ea8e21c3454f441ad6b811631f.png" title=" Example: {vuelo=3}" width="1042"/>
+                <img src="67770b120dfb3c52ac6e4d13ec5aac69a7cea6ea8e21c3454f441ad6b811631f.png" title=" Dado que el usuario Edison accede hasta la p&aacute;gina de Avianca" width="1042"/>
+                <img src="67770b120dfb3c52ac6e4d13ec5aac69a7cea6ea8e21c3454f441ad6b811631f.png" title=" Edison abre el navegador" width="1042"/>
+                <img src="67770b120dfb3c52ac6e4d13ec5aac69a7cea6ea8e21c3454f441ad6b811631f.png" title=" Edison opens the Avianca" width="1042"/>
+                <img src="bccfae48422e1ee10027884096d1b9d2c1df20f40557b3640cc30f767bcde629.png" title=" Edison abre el navegador (completed)" width="1312"/>
+                <img src="bccfae48422e1ee10027884096d1b9d2c1df20f40557b3640cc30f767bcde629.png" title=" Dado que el usuario Edison accede hasta la p&aacute;gina de Avianca (completed)" width="1312"/>
+                <img src="bccfae48422e1ee10027884096d1b9d2c1df20f40557b3640cc30f767bcde629.png" title=" Cuando el selecciona los datos del vuelo 3" width="1312"/>
+                <img src="bccfae48422e1ee10027884096d1b9d2c1df20f40557b3640cc30f767bcde629.png" title=" Edison search flight" width="1312"/>
+                <img src="0e8a85887573032633d316ee7ef8282b3244e2dd8e5168df720c987b007583b1.png" title=" Edison clicks on input from " width="1312"/>
+                <img src="65bfc753b2a16337fd519d620abcdf0da83f6f6d6dea62cdbaed0a7b730af15d.png" title=" Edison clicks on input from  (completed)" width="1312"/>
+                <img src="65bfc753b2a16337fd519d620abcdf0da83f6f6d6dea62cdbaed0a7b730af15d.png" title=" Edison enters 'Bogot&aacute;' into input from " width="1312"/>
+                <img src="82e8701e10b99923d481134ebf13e6a8ddea5e9029b0824b61acf460167a80f4.png" title=" Edison enters 'Bogot&aacute;' into input from  (completed)" width="1312"/>
+                <img src="82e8701e10b99923d481134ebf13e6a8ddea5e9029b0824b61acf460167a80f4.png" title=" Edison clicks on options catalogs" width="1312"/>
+                <img src="2da0dbbc8e01e86f0809848aae3b36d19daaa620ce045bd89e660b81c1e5a20f.png" title=" Edison clicks on options catalogs (completed)" width="1312"/>
+                <img src="2da0dbbc8e01e86f0809848aae3b36d19daaa620ce045bd89e660b81c1e5a20f.png" title=" Edison enters 'Miami' into input destination" width="1312"/>
+                <img src="736d5beebb669fb804ba8bcf07f497617c547e5f724c5a2f13f62450643f0044.png" title=" Edison enters 'Miami' into input destination (completed)" width="1312"/>
+                <img src="736d5beebb669fb804ba8bcf07f497617c547e5f724c5a2f13f62450643f0044.png" title=" Edison clicks on options catalogs" width="1312"/>
+                <img src="27d7d1110227eb32c438d407c705df3762ed81f807579267d7ba0057c84663fb.png" title=" Edison clicks on options catalogs (completed)" width="1312"/>
+                <img src="27d7d1110227eb32c438d407c705df3762ed81f807579267d7ba0057c84663fb.png" title=" Edison clicks on input trip date" width="1312"/>
+                <img src="6cb3419fcb918047e2c1a5470d00b1c3240ff2eaff9b5e6133d1e76daf5842ab.png" title=" Edison clicks on input trip date (completed)" width="1312"/>
+                <img src="6cb3419fcb918047e2c1a5470d00b1c3240ff2eaff9b5e6133d1e76daf5842ab.png" title=" Edison select trip" width="1312"/>
+                <img src="6cb3419fcb918047e2c1a5470d00b1c3240ff2eaff9b5e6133d1e76daf5842ab.png" title=" Edison set months" width="1312"/>
+                <img src="6cb3419fcb918047e2c1a5470d00b1c3240ff2eaff9b5e6133d1e76daf5842ab.png" title=" Edison clicks on button previous month" width="1312"/>
+                <img src="bf2c4dad28b16c8ae9441d466bdc11bc1cbd7f992208ea648cf61f5173265437.png" title=" Edison clicks on button previous month (completed)" width="1312"/>
+                <img src="bf2c4dad28b16c8ae9441d466bdc11bc1cbd7f992208ea648cf61f5173265437.png" title=" Edison set months (completed)" width="1312"/>
+                <img src="bf2c4dad28b16c8ae9441d466bdc11bc1cbd7f992208ea648cf61f5173265437.png" title=" Edison clicks on day of month" width="1312"/>
+                <img src="2d762cc311d3079c0f0bea6d80a01b4c17b4063289c899a4e2f5c20ed1700d2d.png" title=" Edison clicks on day of month (completed)" width="1312"/>
+                <img src="2d762cc311d3079c0f0bea6d80a01b4c17b4063289c899a4e2f5c20ed1700d2d.png" title=" Edison select trip (completed)" width="1312"/>
+                <img src="2d762cc311d3079c0f0bea6d80a01b4c17b4063289c899a4e2f5c20ed1700d2d.png" title=" Edison select return" width="1312"/>
+                <img src="2d762cc311d3079c0f0bea6d80a01b4c17b4063289c899a4e2f5c20ed1700d2d.png" title=" Edison clicks on day of month" width="1312"/>
+                <img src="41ccab84cf53d64137de90f143a0a9219e008162e4f20225b3bad2a40c47b6c6.png" title=" Edison clicks on day of month (completed)" width="1312"/>
+                <img src="41ccab84cf53d64137de90f143a0a9219e008162e4f20225b3bad2a40c47b6c6.png" title=" Edison select return (completed)" width="1312"/>
+                <img src="41ccab84cf53d64137de90f143a0a9219e008162e4f20225b3bad2a40c47b6c6.png" title=" Edison clicks on input persons" width="1312"/>
+                <img src="b0b28f9c281e94b86e347ef86e1425ea138390ef20d323e6ab87d81316e44f8b.png" title=" Edison clicks on input persons (completed)" width="1312"/>
+                <img src="b0b28f9c281e94b86e347ef86e1425ea138390ef20d323e6ab87d81316e44f8b.png" title=" Edison clicks on button class trip" width="1312"/>
+                <img src="17227286efbf314c7afb826e4ba29ea99309bef735657a6d132038115b34bb91.png" title=" Edison clicks on button class trip (completed)" width="1312"/>
+                <img src="17227286efbf314c7afb826e4ba29ea99309bef735657a6d132038115b34bb91.png" title=" Edison add persons" width="1312"/>
+                <img src="17227286efbf314c7afb826e4ba29ea99309bef735657a6d132038115b34bb91.png" title=" Edison clicks on add adult button" width="1312"/>
+                <img src="645acbbfaf38063c02e22ccc04f816539a176357a8dd3af9dda586801fb9c9c2.png" title=" Edison clicks on add adult button (completed)" width="1312"/>
+                <img src="645acbbfaf38063c02e22ccc04f816539a176357a8dd3af9dda586801fb9c9c2.png" title=" Edison add persons (completed)" width="1312"/>
+                <img src="645acbbfaf38063c02e22ccc04f816539a176357a8dd3af9dda586801fb9c9c2.png" title=" Edison clicks on add persons" width="1312"/>
+                <img src="450b033c707df5a4f4abdead64093768107dcd8008007a9598ae273db483b4a0.png" title=" Edison clicks on add persons (completed)" width="1312"/>
+                <img src="450b033c707df5a4f4abdead64093768107dcd8008007a9598ae273db483b4a0.png" title=" Edison clicks on button search flight" width="1312"/>
+                <img src="134e4d0eaa0162b0bf6c85315a50f856ca26b73390d2085fe3b1da65f84ff234.png" title=" Edison clicks on button search flight (completed)" width="1312"/>
+                <img src="d10a256d2ebf72a936dd07b33ead4847cd71152f09b4ec83b082ee35f7dd1e4b.png" title=" Edison clicks on button accept message" width="1312"/>
+                <img src="3a12406e64f557fb5c71f0ec285b065a8dfd82d3e1e0a7127a22bf0f7ebab618.png" title=" Edison clicks on button accept message (completed)" width="1312"/>
+                <img src="3a12406e64f557fb5c71f0ec285b065a8dfd82d3e1e0a7127a22bf0f7ebab618.png" title=" Edison search flight (completed)" width="1312"/>
+                <img src="3a12406e64f557fb5c71f0ec285b065a8dfd82d3e1e0a7127a22bf0f7ebab618.png" title=" Edison select flight" width="1312"/>
+                <img src="d068f38d12f58c9563ff70a4422740715e4a90e44603e33121f12c2480315f9f.png" title=" Edison clicks on button select flight" width="1312"/>
+                <img src="6568ba1bb7c5392ea5347edd0968957e6f5f7bc2bb83328ef9850a79b30f9128.png" title=" Edison clicks on button select flight (completed): <span class='error-color'>ERROR</span>" width="1312"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.1.4</span>
+</div>
+</body>
+</html>

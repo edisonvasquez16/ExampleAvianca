@@ -1,0 +1,135 @@
+{
+  "flights": [
+    {
+      "code": 1,
+      "flightSelect": "2",
+      "from": "Medellín",
+      "destination": "Bogotá",
+      "dateTrip": "10-Abril",
+      "dateReturn": "20-Mayo",
+      "classTrip": "economica",
+      "email": "correo1@gmail.com",
+      "telephone": "325 7891998",
+      "persons": [
+        {
+          "personType": "Adults",
+          "number": 2,
+          "detail": [
+            {
+              "name": "Edwin",
+              "lastName": "Velasquez",
+              "birthdayDay": "15",
+              "birthdayMonth": "Diciembre",
+              "birthdayYear": "1989"
+            },
+            {
+              "name": "Carmela",
+              "lastName": "Montez",
+              "birthdayDay": "23",
+              "birthdayMonth": "Febrero",
+              "birthdayYear": "1992"
+            }
+          ]
+        },
+        {
+          "personType": "Boys",
+          "number": 1,
+          "detail": [
+            {
+              "name": "Rosero",
+              "lastName": "Mamian",
+              "birthdayDay": "13",
+              "birthdayMonth": "Octubre",
+              "birthdayYear": "2011"
+            }
+          ]
+        },
+        {
+          "personType": "Babies",
+          "number": 1,
+          "detail": [
+            {
+              "name": "Miguelita",
+              "lastName": "Hurtado",
+              "birthdayDay": "25",
+              "birthdayMonth": "Mayo",
+              "birthdayYear": "2020"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": 2,
+      "flightSelect": "3",
+      "from": "Medellín",
+      "destination": "Cartagena",
+      "dateTrip": "15-Abril",
+      "dateReturn": "25-Mayo",
+      "classTrip": "ejecutiva",
+      "email": "correo2@gmail.com",
+      "telephone": "3257891992",
+      "persons": [
+        {
+          "personType": "Adults",
+          "number": 2,
+          "detail": [
+            {
+              "name": "Edwin",
+              "lastName": "Velasquez",
+              "birthdayDay": "15",
+              "birthdayMonth": "Diciembre",
+              "birthdayYear": "1989"
+            },
+            {
+              "name": "Carmela",
+              "lastName": "Montez",
+              "birthdayDay": "23",
+              "birthdayMonth": "Febrero",
+              "birthdayYear": "1992"
+            }
+          ]
+        },
+        {
+          "personType": "Boys",
+          "number": 1,
+          "detail": [
+            {
+              "name": "Rosero",
+              "lastName": "Mamian",
+              "birthdayDay": "13",
+              "birthdayMonth": "Octubre",
+              "birthdayYear": "2011"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": 3,
+      "flightSelect": "2",
+      "from": "Bogotá",
+      "destination": "Miami",
+      "dateTrip": "30-Abril",
+      "dateReturn": "30-Mayo",
+      "classTrip": "economica",
+      "email": "correo3@gmail.com",
+      "telephone": "3257891993",
+      "persons": [
+        {
+          "personType": "Adults",
+          "number": 2,
+          "detail": [
+            {
+              "name": "Edwin",
+              "lastName": "Velasquez",
+              "birthdayDay": "15",
+              "birthdayMonth": "Diciembre",
+              "birthdayYear": "1989"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
